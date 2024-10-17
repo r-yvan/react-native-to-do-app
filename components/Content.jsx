@@ -15,13 +15,13 @@ const Content = () => {
   };
   return (
     <View className="flex justify-center items-center px-7">
-      <Text className="text-white text-lg font-bold">Add an activity</Text>
+      <Text className="text-white text-2xl font-bold mt-5">Add an activity</Text>
       <TextInput
-        className="border border-white border-opacity-25 rounded-xl p-2 w-full text-white mt-10"
+        className="border border-grey-9 rounded-xl p-2 w-full text-white mt-5"
         onChangeText={handleChange}
       />
       <TouchableOpacity
-        className="bg-grey-6 py-2 px-4 rounded-full border border-white border-opacity-10 mt-10"
+        className="bg-grey-6 py-2 px-4 rounded-full border border-grey-6 mt-3"
         onPress={() =>
           setActivities([{ description: description }, ...activities])
         }
@@ -29,11 +29,11 @@ const Content = () => {
         <Text className="text-white text-lg font-semibold">Add Activity</Text>
       </TouchableOpacity>
       <FlatList
-        className="mt-10"
+        className="mt-10 w-full"
         data={activities}
         keyExtractor={(item) => item.description}
         renderItem={({ item }) => (
-          <View className="py-3 px-4 bg-grey-5 rounded-lg w-full mx-3 border border-dashed border-grey-8">
+          <View className="py-3 px-4 bg-grey-5 w-full mx-3 my-1 border border-dashed border-grey-8">
             <Text className="text-white text-lg font-semibold">
               {item.description}
             </Text>
