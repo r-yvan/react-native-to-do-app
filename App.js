@@ -1,4 +1,6 @@
 import { StatusBar } from "expo-status-bar";
+import Header from "./components/Header";
+import Content from "./components/Content";
 import {
   Text,
   TouchableWithoutFeedback,
@@ -6,12 +8,14 @@ import {
   Keyboard,
   SafeAreaView,
 } from "react-native";
-import Header from "./components/Header";
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <TouchableWithoutFeedback>
+      <View>
         <Header />
-    </SafeAreaView>
+        <Content />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
