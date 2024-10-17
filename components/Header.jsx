@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <View className="flex flex-row items-center justify-center bg-slate-500 mt-12 py-3">
+    <View className="flex flex-row items-center justify-center bg-grey-3 mt-12 py-3">
       <Text className="text-white text-xl font-bold">To Do Activities</Text>
     </View>
   );
