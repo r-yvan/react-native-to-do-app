@@ -34,7 +34,7 @@ const Content = () => {
           onChangeText={handleChange}
         />
         <TouchableOpacity
-          className="bg-violet-600 px-3 py-2 rounded-full border"
+          className="bg-violet-500 px-3 py-2 rounded-full"
           onPress={() =>
             setActivities([{ description: description }, ...activities])
           }
