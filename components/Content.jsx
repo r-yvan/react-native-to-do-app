@@ -15,13 +15,15 @@ const Content = () => {
   };
   return (
     <View className="flex justify-center items-center px-7">
-      <Text className="text-white text-2xl font-bold mt-5">Add an activity</Text>
+      <Text className="text-white text-2xl font-bold mt-5">
+        Add an activity
+      </Text>
       <TextInput
         className="border border-grey-9 rounded-xl p-2 w-full text-white mt-5"
         onChangeText={handleChange}
       />
       <TouchableOpacity
-        className="bg-grey-6 py-2 px-4 rounded-full border border-grey-6 mt-3"
+        className="bg-violet-600 py-2 px-4 rounded-full border mt-3"
         onPress={() =>
           setActivities([{ description: description }, ...activities])
         }
@@ -33,7 +35,9 @@ const Content = () => {
         data={activities}
         keyExtractor={(item) => item.description}
         renderItem={({ item }) => (
-          <View className="py-3 px-4 bg-grey-5 w-full mx-3 my-1 border border-dashed border-grey-8">
+          <View
+            className="py-3 px-4 bg-grey-5 mx-3 my-1 border-2 rounded-2xl border-grey-7"
+          >
             <Text className="text-white text-lg font-semibold">
               {item.description}
             </Text>
